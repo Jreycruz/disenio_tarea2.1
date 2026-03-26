@@ -1,0 +1,2 @@
+### Obtener todos los corredores
+GET http://localhost:3000/corredores

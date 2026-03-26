@@ -1,0 +1,25 @@
+{
+  "name": "tarea2.1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/Jreycruz/disenio_tarea2.1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jreycruz/disenio_tarea2.1/issues"
+  },
+  "homepage": "https://github.com/Jreycruz/disenio_tarea2.1#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "zod": "^4.3.6"
+  }
+}
