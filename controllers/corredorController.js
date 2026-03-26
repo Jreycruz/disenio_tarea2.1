@@ -1,4 +1,5 @@
 import corredores from '../data/corredores.js';
+import { corredorSchema } from '../schemas/corredorSchema.js';
 
 export const obtenerCorredores = (req, res) => {
   const { categoria } = req.query;
@@ -25,4 +26,23 @@ export const obtenerCorredorPorId = (req, res) => {
   }
 
   res.json(corredor);
+};
+
+export const registrarCorredor = (req, res) => {
+  const resultado = corredorSchema.safeParse(req.body);
+
+  if (!resultado.success) {
+    return res.status(400).json({
+      errores: resultado.error.issues
+    });
+  }
+
+  const nuevoCorredor = {
+    id: corredores.length + 1,
+    ...resultado.data
+  };
+
+  corredores.push(nuevoCorredor);
+
+  res.status(201).json(nuevoCorredor);
 };

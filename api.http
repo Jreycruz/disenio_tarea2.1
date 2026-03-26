@@ -2,4 +2,18 @@
 GET http://localhost:3000/corredores
 
 ### Obtener corredor por ID
-GET http://localhost:3000/corredores/1
+GET http://localhost:3000/corredores/10
+
+### Filtrar por categoria
+GET http://localhost:3000/corredores?categoria=Master
+
+### Crear corredor 
+POST http://localhost:3000/corredores
+Content-Type: application/json
+
+{
+  "nombre": "Luis",
+  "edad": 28,
+  "categoria": "Libre",
+  "tiempoObjetivoMinutos": 95
+}
