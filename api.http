@@ -1,2 +1,5 @@
 ### Obtener todos los corredores
 GET http://localhost:3000/corredores
+
+### Obtener corredor por ID
+GET http://localhost:3000/corredores/1

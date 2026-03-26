@@ -12,3 +12,17 @@ export const obtenerCorredores = (req, res) => {
 
   res.json(corredores);
 };
+
+export const obtenerCorredorPorId = (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const corredor = corredores.find(c => c.id === id);
+
+  if (!corredor) {
+    return res.status(404).json({
+      mensaje: 'Corredor no encontrado'
+    });
+  }
+
+  res.json(corredor);
+};
